@@ -29,3 +29,81 @@ Pelo seu elevado grau de importância, observações são salvas em um históric
 Agora que você entende os conceitos básicos da aplicação, de início dirigindo-se à área de ```Vazão de Esgoto Sanitario```, encontrada na parte superior da tela. Insira os dados e clique em ```Calcular```. O preenchimento dos dados de vazão de uma Rede não adiciona novas informações à tabela, servindo apenas como fundação para ditar como seus trechos e consequentemente sua rede irá funcionar.
 
 Pronto, agora basta adicionar, deletar e editar trechos de acordo com as necessidades do seu projeto. A seguir você irá encontrar um modelo exemplo para que possa testar as funcionalidades da aplicação com um projeto real.
+
+**_MODELO TESTE:_** 
+**- Vazão**
+- População inicial (Pi): **1.000**.
+- População Final (Pf): **1.300**.
+- Per Capita Agua (q): **250**.
+- Coef. Retorno (C.): **0.8**.
+- Coef. Dia Maior Consumo (K1): **1.2**.
+- Coef. Hora Maior Consumo (K2): **1.5**.
+- Vazão Industrial: **0**.
+- Taxa de Infiltração: **0.5**.
+- Extensão Rede Início (Li): **0.542**.
+- Extensão Rede Final (Lf): **0.542**.
+---
+**- Principais**
+- Trecho: **1.1**.
+- Comprimento (L): **95**.
+- Diâmetro (L): **150**.
+- Cota do Terreno de Montante: **18**.
+- Cota do Terreno de Jusante: **16.8**.
+- Recobrimento Coletor de Montante: **0.9**.
+- Ip: **(deixar em branco)**.
+- Contribuição: **(deixar em branco)**.
+---
+- Trecho: **1.2**.
+- Comprimento (L): **87**.
+- Diâmetro (L): **150**.
+- Cota do Terreno de Montante: **16.8**.
+- Cota do Terreno de Jusante: **15.9**.
+- Recobrimento Coletor de Montante: **(deixar em branco)**.
+- Ip: **(deixar em branco)**.
+- Contribuição: **(deixar em branco)**.
+---
+- Trecho: **1.3**.
+- Comprimento (L): **92**.
+- Diâmetro (L): **150**.
+- Cota do Terreno de Montante: **15.9**.
+- Cota do Terreno de Jusante: **15**.
+- Recobrimento Coletor de Montante: **(deixar em branco)**.
+- Ip: **(deixar em branco)**.
+- Contribuição: **(deixar em branco)**.
+---
+- Trecho: **1.4**.
+- Comprimento (L): **54**.
+- Diâmetro (L): **150**.
+- Cota do Terreno de Montante: **15**.
+- Cota do Terreno de Jusante: **14.85**.
+- Recobrimento Coletor de Montante: **(deixar em branco)**.
+- Ip: **(deixar em branco)**.
+- Contribuição: **(deixar em branco)**.
+---
+**- Adjacentes**
+- Trecho: **2.1**.
+- Comprimento (L): **77**.
+- Diâmetro (L): **150**.
+- Cota do Terreno de Montante: **16**.
+- Cota do Terreno de Jusante: **15.9**.
+- Recobrimento Coletor de Montante: **0.9**.
+- Ip: **(deixar em branco)**.
+- Contribuição: **1.3**.
+---
+- Trecho: **3.1**.
+- Comprimento (L): **74**.
+- Diâmetro (L): **150**.
+- Cota do Terreno de Montante: **15.2**.
+- Cota do Terreno de Jusante: **15**.
+- Recobrimento Coletor de Montante: **0.9**.
+- Ip: **(deixar em branco)**.
+- Contribuição: **1.4**.
+---
+- Trecho: **4.1**.
+- Comprimento (L): **63**.
+- Diâmetro (L): **150**.
+- Cota do Terreno de Montante: **16**.
+- Cota do Terreno de Jusante: **15**.
+- Recobrimento Coletor de Montante: **0.9**.
+- Ip: **(deixar em branco)**.
+- Contribuição: **1.4**.
