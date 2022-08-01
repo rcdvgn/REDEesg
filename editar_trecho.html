@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDEesg</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="editar_trecho.css">
+
+    <script src="editar_trecho.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <div class="head">
+                <div class="logo">
+                    <a href="index.html">REDE<small>esg</small></a>
+                </div>
+                <div class="navbar">
+                    <a class="active" href="main.html" >Planilha de Dimensionamento</a>
+                    <a href="vazao.html" style="margin-right: 210px;">Vazão de Esgoto Sanitário</a>
+                    <a href="dims.html" style= "margin-right: 50px;">Sair</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="body">
+            <h2><label id="title"></label></h2>
+            <hr>
+            <form autocomplete="off">
+                <table>
+                    <tr>
+                        <td>Trecho: </td>
+                        <td><input id="nome" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>L (m): </td>
+                        <td><input id="l"></td>
+                    </tr>
+                    <tr>
+                        <td>D (mm): </td>
+                        <td><input id="d"></td>
+                    </tr>
+                    <tr>
+                        <td>Cota do terreno de montante: </td>
+                        <td><input id="ctm"></td>
+                    </tr>
+                    <tr>
+                        <td>Cota do terreno de jusante: </td>
+                        <td><input id="ctj"></td>
+                    </tr>
+                    <tr>
+                        <td>Recobrimento coletor (de montante):</td>
+                        <td><input id="rcm"></td>
+                    </tr>
+                </table>
+                <hr>
+                <table>
+                    <tr>
+                        <td>*Ip: </td>
+                        <td><input id="ip"></td>
+                    </tr>
+                    <tr>
+                        <td>*Contribuicao: </td>
+                        <td><input id="foz"></td>
+                    </tr>
+                </table>
+            </form>
+            <label id="button"></label>
+            
+            <br><br>
+            <label id="remove"></label> 
+        </div>
+        <div class="footer">
+            <div class="l">
+                Copyright &copy, <label id="data"></label> | Todos os direitos reservados.
+            </div>
+            <div class="r">
+                <a href = "#">Sobre</a><a href = "#">Contato</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDEesg</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+
+    <script src="main.js"></script>
+    </head>
+    <body>
+    <div class="container">
+        <div class="head">
+            <div class="logo">
+                <a href="index.html">REDE<small>esg</small></a>
+            </div>
+            <div class="navbar">
+                <a class="active" href="main.html" >Planilha de Dimensionamento</a>
+                <a href="vazao.html" style="margin-right: 210px;">Vazão de Esgoto Sanitário</a>
+                <a href="dims.html" style= "margin-right: 50px;">Sair</a>
+            </div>
+        </div>
+        <div class="body">
+            <table id="tbl_exporttable_to_xls">
+                <tr>
+                    <th rowspan="4">Trecho</th>
+                    
+                    <th rowspan="2">L</th>
+                    <th rowspan="2">Tcl<br>l/s.m</th>
+                    <th rowspan="2">Q<br>mon<br>l/s</th>
+                    <th rowspan="2">Q<br>trec<br>l/s</th>
+                    <th rowspan="2">Q<br>jus.<br>l/s</th>
+                    <th rowspan="2">Q<br>proj<br>l/s</th>
+                    <th rowspan="2">D</th>
+                    <th rowspan="2">It</th>
+                    <th rowspan="2">Imin</th>
+                    <th rowspan="2">Ip</th>
+                    <th colspan="2" >Qp/ sqr l</th>
+                    <th rowspan="2" >Veloc.<br>sqr lp</th>
+                    <th rowspan="2" >Y / D</th>
+                    <th rowspan="2" >Vfin. <br> m/s</th>
+                    <th rowspan="2">B<br>Tab</th>
+                    <th rowspan="2">Rh = <br> B . D</th>
+                    <th rowspan="2" >Vcri<br>m/s</th>
+                    <th colspan="2" >Tensao Trativa</th>
+                    <th rowspan="2" >Cota <br>Terreno</th>
+                    <th rowspan="2" >Cota <br>Coletor</th>
+                    <th rowspan="2" >Prof. <br>Coletor</th>
+                    <th rowspan="2" >Rec. <br>Coletor</th>
+                    <th rowspan="4">Prof<br>Sing.<br>jus.<br>m</th>
+                    <th rowspan="4"><button onclick="add_trecho()" class="nt_but">Adicionar<br>Trecho</button></th>
+                </tr>
+                <tr>
+                    <td>Calc.</td>
+                    <td>Adot.</td>
+                    <td>kgf/m2</td>
+                    <td>Pa</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">m</th>
+                    <td>inicial</td>
+                    <td>inicial</td>
+                    <td>inicial</td>
+                    <td>inicial</td>
+                    <td>inicial</td>
+                    <th rowspan="2">mm</th>
+                    <th rowspan="2">m/m</th>
+                    <th rowspan="2">m/m</th>
+                    <th rowspan="2">m/m</th>
+                    <th colspan="2">inicial</th>
+                    <td>inicial</td>
+                    <td>inicial</td>
+                    <td>inicial</td>
+                    <td>inicial</td>
+                    <td>inicial</td>
+                    <td>inicial</td>
+                    <td>inicial</td>
+                    <td>inicial</td>
+                    <td>mon.</td>
+                    <td>mon.</td>
+                    <td>mon.</td>
+                    <td>mon.</td>
+                </tr>
+                <tr>
+                    <td>final</td>
+                    <td>final</td>
+                    <td>final</td>
+                    <td>final</td>
+                    <td>final</td>
+                    <th colspan="2">final</th>
+                    <td>final</td>
+                    <td>final</td>
+                    <td>final</td>
+                    <td>final</td>
+                    <td>final</td>
+                    <td>final</td>
+                    <td>final</td>
+                    <td>final</td>
+                    <td>jus.</td>
+                    <td>jus.</td>
+                    <td>jus.</td>
+                    <td>jus.</td>
+                </tr>
+                <tbody id="table">
+
+                </tbody>
+            </table>
+             
+            <div class="obs">
+                <select id="selector" style="margin-left: 2rem; margin-bottom: 1rem;">
+                    
+                </select>
+                <button class="viz_but" onclick = "show_obs()">Visualizar</button>
+                <ul id="list">
+                    
+                </ul>
+
+                
+            </div>
+            <br><br>
+            <button class="pdf_but" onclick="ExportToExcel('xlsx')">Exportar para Excel</button>
+        </div>
+        <div class="footer">
+            <div class="l">
+                Copyright &copy, <label id="data"></label> | Todos os direitos reservados.
+            </div>
+            <div class="r">
+                <a href = "#">Sobre</a><a href = "#">Contato</a>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,119 @@
+body
+{
+    margin: 0;
+    background: #EBEAEA;
+}
+.head
+{
+    position: fixed;
+}
+.container
+{
+    width: 100%;
+    height: 100%;
+}
+.footer
+{
+    width: 132%;
+}
+
+.footer a
+{
+    margin-right: 50px;
+    margin-left: 50px;
+    text-decoration: none;
+    color: #EBEAEA;
+}
+.footer a:hover
+{
+    color: #121996;
+}
+.footer a.active
+{
+    color: #121996;
+}
+.body
+{
+    box-sizing: border-box;
+    margin: auto;
+    font-size: 10px;
+    text-align: center;
+    clear: both;
+    color: black;
+    padding-bottom: 5vh;
+    font-weight: bold;
+}
+table
+{
+    margin-top: 22vh;
+    margin-left: 7vh;
+    width: 125%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+th
+{
+    border: 1px solid #2c2c2c;
+}
+td
+{
+    border: 1px solid #2c2c2c;
+}
+td[rowspan]:not([rowspan="1"])
+{
+    height: 14vh;
+}
+th[rowspan]:not([rowspan="1"])
+{
+    height: 14vh;
+}
+.obs
+{
+    margin-top: 50px;
+    font-size: 18px;
+    text-align: left;
+    margin-left: 7vh;
+}
+button
+{
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    background: #2e3094;
+    font-size: 15px;
+    cursor: pointer;
+    color: #ebeaea;
+    border: solid 2px #2e3094;
+}
+.nt_but
+{
+    width: 90px;
+}
+.et_but
+{
+    width: 90px;
+}
+.pdf_but
+{
+    width: 150px;
+}
+.viz_but
+{
+    width: 130px;
+}
+.et_but:hover, .nt_but:hover, .viz_but:hover, .pdf_but:hover
+{
+    background: #26287D;
+}
+select
+{
+    height: 40px;
+    width: 200px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+option
+{
+    height: 40px;
+    width: 200px;
+}
