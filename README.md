@@ -1,7 +1,7 @@
 # REDEesg
 Mapeamento inteligente de redes de esgoto sanitário.
 
-(Ao fim do arquivo será disponibilizado um modelo teste com valores para serem usados como exemplo.)
+(Ao fim do arquivo será disponibilizado um modelo teste com valores para serem usados como exemplo).
 
 ## Instruções
 Ao iniciar, a primeira tela é de apresentação e contém uma breve descrição, tal qual o livro em que é baseada. 
